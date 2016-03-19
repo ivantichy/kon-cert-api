@@ -9,14 +9,9 @@ if [[ ! -f haveca ]]; then
 
         echo "y"> haveca
 	Koncentrator/test/BasicTests/cleanserver.sh
-	chmod +x Koncentrator/*.sh
 
 fi
 
-service openvpn start 
-
 java -classpath Koncentrator/*:Koncentrator/lib/* cz.ivantichy.httpapi.handlers.vpnapi.RunnerCERT >> cert.log
-
-service openvpn stop
 
 
